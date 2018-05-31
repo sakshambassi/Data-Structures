@@ -8,7 +8,7 @@ struct node
 	struct node * next;
 };
 
-node * create_node(int data)
+struct node * create_node(int data)
 {
 	struct node *temp;
 	temp = new(struct node);
@@ -17,7 +17,7 @@ node * create_node(int data)
 	return temp;
 }
 
-node * insertStart(struct node *head)
+struct node * insertStart(struct node *head)
 {
 	int value;
 	struct node *temp,*p;
@@ -78,7 +78,7 @@ void insertMiddle(struct node *head)
 	temp -> next = q;
 }
 
-node * deleteNode(struct node * head)
+struct node * deleteNode(struct node * head)
 {
 	int value;
 	struct node *p,*q;
@@ -104,7 +104,7 @@ node * deleteNode(struct node * head)
 	return head;
 }
 
-node * reverseList(struct node * head)
+struct node * reverseList(struct node * head)
 {
 	struct node *curr, *prev, *next;
 	curr = head;
